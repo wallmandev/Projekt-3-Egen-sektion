@@ -1,0 +1,62 @@
+.information{
+    background-image: linear-gradient(360deg, #D0957E, #d0957e00);
+
+}
+
+.card{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 7rem;
+    gap: var(--gap-l);
+    
+    &__image{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.2s;
+        opacity: 1;
+        overflow: hidden;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    &__link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    &__link-book{
+        color: var(--color-light);
+        font-size: var(--font-size-5);
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all 0.3s;
+    }
+
+    &__link-book:hover {
+        transition: all 0.3s;
+        opacity: 1;
+    }
+
+    &__picture{
+        max-width: 400px;
+        height: 400px;
+        object-fit: cover;
+        box-shadow: 5px 5px 15px -5px black;
+    }
+
+
+
+}
