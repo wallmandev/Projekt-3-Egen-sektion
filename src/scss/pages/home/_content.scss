@@ -1,21 +1,62 @@
+@use '../../utilities/responsive';
+@use '../../components/buttons' as button;
+
 .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: var(--gap-l);
+    margin: var(--gap-xl);
+    margin-top: 0;
 
 
     &__title{
-        margin-bottom: 0;
-        font-size: clamp(3rem, 8vw, 4.25rem);
+        margin: 0;
+        font-size: clamp(3rem, 8vw, 5.25rem);
     }
-    &__subtitle{
-        max-width: 50rem;
-        font-family: var(--font-sans);
-        font-size: var(--font-size-2);
-        line-height: var(--line-height);
 
+    span{
+        color: var(--color-accent);
+    }
+
+    &__subtitle{
+        max-width: 40rem;
+        font-family: var(--font-sans);
+        font-size: clamp(1rem, 8vw, 1.5rem);
+        line-height: var(--line-height);
+        margin-bottom: var(--gap-s);
+    }
+
+    &__button{
+        all: unset;
+        cursor: pointer;
+        position: relative;
+        font-size: var(--font-size-1);
+        margin-bottom: var(--gap-s);
+        color: black;
+        transition: all 0.2s;
+
+        &:hover{
+            transition: all 0.2s;
+            color: var(--color-accent);
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            display: block;
+            height: 1px;
+            max-width: 96px;
+            width: 100%;
+            background-color: black;
+            opacity: 0.34;
+            right: 0;
+            bottom: 0;
+
+            @include responsive.max(40rem){
+                max-width: 75px;
+            }
+        }
     }
 
 

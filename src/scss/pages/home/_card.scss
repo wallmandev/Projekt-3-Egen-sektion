@@ -1,5 +1,7 @@
+@use '../../utilities/responsive';
+
 .information{
-    background-image: linear-gradient(360deg, #D0957E, #d0957e00);
+    background-image: linear-gradient(360deg, #D8C3A3, #d0957e00);
 
 }
 
@@ -11,6 +13,13 @@
     flex-direction: row;
     padding-bottom: 7rem;
     gap: var(--gap-l);
+    margin: 0 1rem;
+
+
+    @include responsive.max(75rem) {
+        flex-direction: column;
+        align-items: 0;
+    }
     
     &__image{
         position: relative;
@@ -20,7 +29,8 @@
         transition: all 0.2s;
         opacity: 1;
         overflow: hidden;
-
+        box-shadow: 5px 5px 15px -5px black;
+        
         &:hover{
             transform: scale(1.1);
         }
@@ -32,9 +42,9 @@
         justify-content: center;
     }
     
-    &__link-book{
+    &__link-book, &__link-book--adventure{
         color: var(--color-light);
-        font-size: var(--font-size-5);
+        font-size: clamp(2rem, 8vw, 1rem);
         position: absolute;
         display: flex;
         align-items: center;
@@ -43,6 +53,10 @@
         height: 100%;
         opacity: 0;
         transition: all 0.3s;
+
+        @include responsive.max(75rem) {
+            opacity: 1;
+        }
     }
 
     &__link-book:hover {
@@ -51,10 +65,9 @@
     }
 
     &__picture{
-        max-width: 400px;
-        height: 400px;
+        max-width: 350px;
+        height: 350px;
         object-fit: cover;
-        box-shadow: 5px 5px 15px -5px black;
     }
 
 
