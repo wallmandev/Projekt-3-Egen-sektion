@@ -38,6 +38,7 @@
         font-size: var(--font-size-1);
         margin-bottom: var(--gap-s);
         color: black;
+        transition: all 0.2s;
 
         &:hover{
             transition: all 0.2s;
