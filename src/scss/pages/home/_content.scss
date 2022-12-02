@@ -1,5 +1,5 @@
 @use '../../utilities/responsive';
-@use '../../components/buttons' as button;
+
 
 .content {
     display: flex;
@@ -8,6 +8,10 @@
     align-items: center;
     margin: var(--gap-xl);
     margin-top: 0;
+
+    @include responsive.max(31.25rem){
+        margin: 0 20px var(--gap-xl) 20px;
+    }
 
 
     &__title{
@@ -34,7 +38,6 @@
         font-size: var(--font-size-1);
         margin-bottom: var(--gap-s);
         color: black;
-        transition: all 0.2s;
 
         &:hover{
             transition: all 0.2s;

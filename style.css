@@ -459,6 +459,11 @@ li {
   margin: var(--gap-xl);
   margin-top: 0;
 }
+@media screen and (max-width: 31.25rem) {
+  .content {
+    margin: 0 20px var(--gap-xl) 20px;
+  }
+}
 .content__title {
   margin: 0;
   font-size: clamp(3rem, 8vw, 5.25rem);
@@ -480,7 +485,6 @@ li {
   font-size: var(--font-size-1);
   margin-bottom: var(--gap-s);
   color: black;
-  transition: all 0.2s;
 }
 .content__button:hover {
   transition: all 0.2s;
